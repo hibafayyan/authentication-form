@@ -7,15 +7,15 @@
 }
 
 .parent{
-    width: 1000px;
-    height: 520px;
+    max-width: 930px;
+    min-height: 450px;
     background-color: aliceblue;
     display: flex;
-    flex-direction: column;
+    flex-direction:row;
    
-    flex-wrap: wrap;
+    
     border-radius: 10px ;
-    margin: 10vh ;
+    margin: 10vh  ;
     box-shadow: inset;
 
     
@@ -84,7 +84,10 @@ img {
 
 
 /* form section */
-
+.rightpanel{
+     /* flex: 1;    */
+    padding: 20px;
+}
 .header p , h2{
    margin-top: 40px;
    margin-right:500px;
@@ -127,16 +130,13 @@ font-size: small;
         margin-top: 10px;
     }
 
-    .project:has(input:checked),
-.design:has(input:checked) {
-    border: 2px solid blue;
-    color: blue;
-}
+
           /* enter email address */
     
-.email{
+.email,{
     display: block;
-     width: 460px;
+    max-width: 460px;
+    width:100%;
     height: 40px;
      border: 2px solid #88888893;
     border-radius: 5px;
@@ -146,24 +146,26 @@ font-size: small;
 }
 
 
-.password{
-     width: 460px;
+ .password{
+    max-width: 460px;
+    width: 100%;
     height: 40px;
      border: 2px solid #88888893;
     border-radius: 5px;
     padding: 10px;
     margin-top: 10px;
     
-}
+} 
 
-.skills{
-     width: 460px;
+ .skills{
+    max-width:  460px;
+    width: 100%;
     height: 40px;
      border: 2px solid #88888893;
     border-radius: 5px;
     padding: 10px;
      margin-top: 10px;
-}
+} 
 
 button{
     width: 200px;
@@ -185,4 +187,16 @@ button{
 
 
 
-
+@media (max-width:1010px){
+    .parent{
+        display:flex;
+        flex-direction:column;
+         width: 100%;
+        margin: 0;
+    }
+   .sidebar{
+    width: 100%;
+    margin: 0;
+    height: auto;
+   }
+}
